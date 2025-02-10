@@ -1,0 +1,11 @@
+services:
+  angular-app:
+    image: angular-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+          - ./dist/client/browser:/usr/share/nginx/html
+    ports:
+      - "4200:80"
+    restart: always

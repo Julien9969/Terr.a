@@ -4,9 +4,9 @@ services:
     build: ./client
     ports:
       - "4200:4200"
-      - "9876:9876"
     volumes:
       - ./client:/usr/src/app
     stdin_open: true
     tty: true
-    command: /bin/sh -c "npm i && npm run build"
+    command: /bin/sh -c "npm i && npm run dev"
+    # command: /bin/sh -c "npm i && npm run build"
